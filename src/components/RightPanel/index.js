@@ -4,9 +4,13 @@ import ClickableFragment from '../ClickableFragment'
 const RightPanel = props => {
   return (
     <div className="rightpanel">
-      {props.fragments.map(fragment => {
+      {props.fragments.map((fragment, i) => {
         return(
-          <ClickableFragment clickHandle={props.clickHandle}>{fragment}</ClickableFragment>
+          <ClickableFragment key={i}
+            order={i}
+            clickHandle={props.clickHandle}>
+              {fragment}
+          </ClickableFragment>
         )
       })}
     </div>

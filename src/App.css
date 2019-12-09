@@ -35,6 +35,8 @@
 } */
 .clickable-fragment {
   cursor: pointer;
+  position: absolute;
+  white-space: nowrap;
 }
 .fragment {
   display: inline-block;
@@ -50,4 +52,5 @@
 .rightpanel {
   border-left: 1px solid black;
   width: 50%;
+  position: relative;
 }
