@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 .App-header {
@@ -35,4 +27,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* .clicked-fragment {
+  box-shadow: inset 2px 2px goldenrod, inset -2px -2px goldenrod;
+  transition: 0.3s linear all;
+} */
+.clickable-fragment {
+  cursor: pointer;
+}
+.fragment {
+  display: inline-block;
+  margin-bottom: 20px;
+  line-height: 1rem;
+}
+.leftpanel {
+  border-right: 1px solid black;
+  width: 50%;
+  text-align: left;
+  margin-left: 30px;
+}
+.rightpanel {
+  border-left: 1px solid black;
+  width: 50%;
 }
