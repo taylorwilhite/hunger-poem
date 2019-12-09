@@ -6,7 +6,7 @@ const RightPanel = props => {
     <div className="rightpanel">
       {props.fragments.map(fragment => {
         return(
-          <ClickableFragment clickHandle={props.clickHandle}>{fragment} </ClickableFragment>
+          <ClickableFragment clickHandle={props.clickHandle}>{fragment}</ClickableFragment>
         )
       })}
     </div>

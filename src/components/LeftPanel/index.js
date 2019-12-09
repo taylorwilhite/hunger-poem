@@ -5,7 +5,7 @@ const LeftPanel = (props) => {
     <div className="leftpanel">
       {props.fragments ? props.fragments.map(fragment => {
         return (
-          <p className="fragment">{fragment}</p>
+          <p className="fragment">{fragment}&nbsp;</p>
         )
       }) : ''}
     </div>
