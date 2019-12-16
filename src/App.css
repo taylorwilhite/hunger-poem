@@ -42,6 +42,16 @@
   display: inline-block;
   margin-bottom: 20px;
   line-height: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 .leftpanel {
   border-right: 1px solid black;
