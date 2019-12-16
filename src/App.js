@@ -15,18 +15,23 @@ const fragmentList = [
 ]
 
 function App() {
-  const [state, setState] = useState({})
+  const [state, setState] = useState({fragments:[], lines:[]})
 
-  const handleFragmentClick = (newFragment) => {
-    state.fragments
-    ? setState({fragments: [...state.fragments, newFragment]})
-    : setState({fragments: [newFragment]})
-
+  const handleFragmentClick = (newFragment, id) => {
+    const newLine = state.current || state.current === 0
+    ? {from: state.current, to: id}
+    : null
+    setState({
+      ...state,
+      fragments: [...state.fragments, newFragment],
+      lines: newLine ? [...state.lines, newLine] : [...state.lines],
+      current: id
+    })
   }
   return (
     <div className="App">
       <LeftPanel fragments={state.fragments} />
-      <RightPanel fragments={fragmentList} clickHandle={handleFragmentClick} />
+      <RightPanel lines={state.lines} fragments={fragmentList} clickHandle={handleFragmentClick} />
     </div>
   );
 }

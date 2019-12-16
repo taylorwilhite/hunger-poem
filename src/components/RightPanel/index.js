@@ -1,5 +1,6 @@
 import React from 'react'
 import ClickableFragment from '../ClickableFragment'
+import LineTo from 'react-lineto'
 
 const RightPanel = props => {
   return (
@@ -13,6 +14,21 @@ const RightPanel = props => {
           </ClickableFragment>
         )
       })}
+      {props.lines ? props.lines.map((line, i) => {
+        const prefix='fragment-'
+        const below = line.from < line.to
+        return(
+          <LineTo
+            borderColor="grey"
+            borderWidth={3}
+            zIndex={-1}
+            from={prefix + line.from}
+            to={prefix + line.to}
+            fromAnchor={(below ? 'bottom' : 'top') + ' center'}
+            toAnchor={(below ? 'top' : 'bottom') + ' center'}
+          />
+        )
+      }) : ''}
     </div>
   )
 }

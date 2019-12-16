@@ -26,11 +26,11 @@ const ClickableFragment = props => {
 
   const handleClick = (payload) => {
     setClicked(true);
-    props.clickHandle(payload)
+    props.clickHandle(payload, props.order)
   }
   return (
     <p 
-      className={'clickable-fragment' + (clicked ? ' clicked-fragment' : '')}
+      className={'clickable-fragment fragment-' + props.order + (clicked ? ' clicked-fragment' : '')}
       onClick={() => handleClick(props.children)}
       style={style}
       ref={fragRef}>
