@@ -6,7 +6,7 @@ const LeftPanel = (props) => {
       <div className="left-frag-container">
         {props.fragments ? props.fragments.map(fragment => {
           return (
-            <p className="fragment">{fragment}&nbsp;</p>
+            fragment.map(fragment => <p className="fragment">{fragment}&nbsp;</p>) 
           )
         }) : ''}
       </div>

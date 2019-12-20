@@ -1,16 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-const maxLeft = width => {
-  const panelWidth = (window.innerWidth / 2)
+const maxLeft = (width, num) => {
+  const panelWidth = (window.innerWidth / 4)
   const maxWidth = (panelWidth - (width + 10))
 
   return maxWidth
 }
 
 const fragStyle = (num, width) => {
+  const panelWidth = (window.innerWidth / 4)
+  const maxWidth = (panelWidth - (width + 10))
+  const odd = (num + 1) % 2 === 0
+  const line =  odd ? num - 1 : num
   return {
-    top: `${num * 30}px`,
-    left: Math.floor(Math.random() * maxLeft(width))
+    top: `${line * 26}px`,
+    left: odd ? Math.floor(Math.random() * maxWidth) : panelWidth + Math.floor(Math.random() * maxWidth)
   }
 }
 

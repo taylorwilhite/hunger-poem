@@ -6,11 +6,14 @@ const RightPanel = props => {
   return (
     <div className="rightpanel">
       {props.fragments.map((fragment, i) => {
+        fragment = fragment.split('\n')
         return(
           <ClickableFragment key={i}
             order={i}
             clickHandle={props.clickHandle}>
-              {fragment}
+              {fragment.length > 1 ? fragment.map((frag, i, arr) => {
+                return arr.length - 1 === i ? frag : frag + `\n`
+                }) : fragment}
           </ClickableFragment>
         )
       })}
