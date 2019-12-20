@@ -54,17 +54,17 @@
   }
 }
 .leftpanel {
-  border-right: 1px solid black;
+  border-left: 1px solid black;
   width: 50%;
   text-align: left;
-  margin-left: 30px;
+  padding-left: 30px;
 }
 .left-frag-container {
   width: 100%;
   max-width: 500px;
 }
 .rightpanel {
-  border-left: 1px solid black;
+  border-right: 1px solid black;
   width: 50%;
   position: relative;
 }

@@ -19,8 +19,8 @@ const RightPanel = props => {
         const below = line.from < line.to
         return(
           <LineTo
-            borderColor="grey"
-            borderWidth={3}
+            borderColor="#FF4136"
+            borderWidth={1}
             zIndex={-1}
             from={prefix + line.from}
             to={prefix + line.to}

@@ -4,14 +4,36 @@ import LeftPanel from './components/LeftPanel'
 import RightPanel from './components/RightPanel'
 
 const fragmentList = [
-  'Hunger as a function of belief',
-  'Hunger, in this case,',
-  'directly related to',
-  "one's willingness to indulge",
+  'hunger as',
+  'a function of belief',
+  'hunger, in this case,',
+  "directly related to",
+  'one’s willingness to indulge',
   'the innumerable sensory stimuli',
   'constantly lending the body reason',
   'for instance',
-  'which is iteself a function of grief'
+  "a rejection of margaret price's <br>rejection of cartesian dualism",
+  'because one cannot remember <br>having ever been a bodymind, anyway',
+  'anyway',
+  'hunger as a function of',
+  'belief',
+  'itself',
+  'a function of hunger',
+  'and one will figure out what it’s all about in the <br>black hole at the center of that ourobouros',
+  'hunger as mere sensation',
+  'for instance',
+  'hunger being',
+  'one’s direct fucking line to god, <br>via simone weil anyway',
+  'maybe just a direct line to simone weil',
+  'which is probably good enough',
+  'a tool, a cudgel',
+  'heavy in the hand',
+  'but which',
+  'nevertheless',
+  'hunger',
+  'an impression',
+  'hunger an image of',
+  'the equation, but not necessarily that'
 ]
 
 function App() {
@@ -30,8 +52,8 @@ function App() {
   }
   return (
     <div className="App">
-      <LeftPanel fragments={state.fragments} />
       <RightPanel lines={state.lines} fragments={fragmentList} clickHandle={handleFragmentClick} />
+      <LeftPanel fragments={state.fragments} />
     </div>
   );
 }

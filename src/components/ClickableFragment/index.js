@@ -9,7 +9,7 @@ const maxLeft = width => {
 
 const fragStyle = (num, width) => {
   return {
-    top: `${num * 100}px`,
+    top: `${num * 30}px`,
     left: Math.floor(Math.random() * maxLeft(width))
   }
 }
