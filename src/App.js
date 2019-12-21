@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import LeftPanel from './components/LeftPanel'
 import RightPanel from './components/RightPanel'
+import InfoModal from './components/InfoModal'
 
 const fragmentList = [
   'hunger as',
@@ -38,6 +39,7 @@ const fragmentList = [
 
 function App() {
   const [state, setState] = useState({fragments:[], lines:[]})
+  const [modalOpen, setModalOpen] = useState(false)
 
   const handleFragmentClick = (newFragment, id) => {
     const newLine = state.current || state.current === 0
@@ -54,6 +56,13 @@ function App() {
     <div className="App">
       <RightPanel lines={state.lines} fragments={fragmentList} clickHandle={handleFragmentClick} />
       <LeftPanel fragments={state.fragments} />
+      <button onClick={() => setModalOpen(true)} className="modal-link">?</button>
+      <InfoModal isOpen={modalOpen}>
+        <div className="modal-inner">
+          “Tell yourself” is a poem by <a href="mailto:a.jinha.song@gmail.com">A. Jinha Song</a>, produced in collaboration with designer <a href="mailto:taylorwilhite@gmail.com">Taylor Wilhite</a>. 2019. Refresh this page to begin again.
+        </div>
+        <button onClick={() => setModalOpen(false)} className="modal-link">X</button>
+      </InfoModal>
     </div>
   );
 }

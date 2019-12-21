@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   height: 100vh;
+  position: relative;
 }
 
 .App-header {
@@ -69,4 +70,22 @@
   width: 50%;
   position: relative;
   overflow-y: scroll;
+}
+.modal-link {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  border: none;
+  background:transparent;
+  text-decoration: underline;
+  color:blue;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.modal-inner {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 40%;
+  height: 50%;
 }
