@@ -1,12 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
 
-const maxLeft = (width, num) => {
-  const panelWidth = (window.innerWidth / 4)
-  const maxWidth = (panelWidth - (width + 10))
-
-  return maxWidth
-}
-
 const fragStyle = (num, width) => {
   const panelWidth = (window.innerWidth / 4)
   const maxWidth = (panelWidth - (width + 10))
