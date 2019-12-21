@@ -7,7 +7,7 @@ const fragStyle = (num, width) => {
   const line =  odd ? num - 1 : num
   return {
     top: `${line * 26}px`,
-    left: odd ? Math.floor(Math.random() * maxWidth) : panelWidth + Math.floor(Math.random() * maxWidth)
+    left: odd ? panelWidth + Math.floor(Math.random() * maxWidth) : Math.floor(Math.random() * maxWidth)
   }
 }
 
